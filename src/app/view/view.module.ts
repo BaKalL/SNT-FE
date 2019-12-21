@@ -16,12 +16,16 @@ import {
     IgxCardModule ,
     IgxInputGroupModule,
     IgxAvatarModule ,
-    IgxDropDownModule 
+    IgxDropDownModule ,
+    IgxTooltipModule
  } from 'igniteui-angular';
-
+import { AuthGuard } from '../guard/auth.guard';
 const appRoutes: Routes = [
     { 
-        path: '', component: ViewComponent, children:
+        path: '', 
+        component: ViewComponent, 
+        canActivate: [AuthGuard],
+        children:
         [
             {path: '', redirectTo: 'newsfeed', pathMatch: 'full'},
             {path: 'newsfeed', component: MainComponent}
@@ -48,6 +52,7 @@ const appRoutes: Routes = [
         IgxNavbarModule,
         IgxListModule,
         IgxCardModule ,
+        IgxTooltipModule,
         IgxInputGroupModule,
         RouterModule.forChild(appRoutes)
     ],

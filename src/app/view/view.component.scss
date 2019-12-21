@@ -43,7 +43,8 @@ footer {
 // }
 
 ::ng-deep .igx-navbar__right igx-icon {
-    color: white
+    color: white;
+    vertical-align: middle;
 }
 
 ::ng-deep .igx-list__item-base {
@@ -84,6 +85,11 @@ footer {
     color: black;
     font-weight: 800;
 }
+.icon-span {
+    color: white;
+    font-size: 12px;
+}
+
 
 
 

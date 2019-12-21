@@ -1,16 +1,37 @@
 <div class="container-fluid" style="padding: 20px 0px;background: #f7f5f5;">
-    <div class="navbar" igxLayout style="display:flex">
-        <igx-navbar style="width: 100%;" title="H" igxFlex>
+    <div class="navbar"  igxLayout style="display:flex">
+        <igx-navbar title="H" style="width: 100%;"  igxFlex>
             <igx-input-group type="search">
                 <input #input1 igxInput placeholder="Search" />
                 <igx-suffix>
                     <igx-icon id="search-ico" style="color: black;">search</igx-icon>
                 </igx-suffix>
             </igx-input-group>
-
-            <igx-icon fontSet="material">notification_important</igx-icon>
-            <igx-icon fontSet="material">swap_horiz</igx-icon>
-            <igx-icon fontSet="material">chevron_right</igx-icon>
+            <a class="navbar-link" href="#">
+                <igx-avatar src="../../assets/img/user.png" style="width: 25px; height: 25px; min-width: 25px;" roundShape="true"></igx-avatar>
+                <span class="icon-span">
+                    Profile
+                </span>
+            </a>
+            <a class="navbar-link" href="#">
+                <igx-icon fontSet="material" #target="tooltipTarget" [igxTooltipTarget]="tooltipRef">notification_important</igx-icon>
+                <span class="icon-span">
+                    Notify
+                </span>
+            </a>
+            <a class="navbar-link" href="#">
+                <igx-icon fontSet="material" #target="tooltipTarget" [igxTooltipTarget]="tooltipRef">swap_horiz</igx-icon>
+                <span class="icon-span">
+                    Switch account
+                </span>
+            </a>
+            <a class="navbar-link" href="#" (click)="logout()">
+                <igx-icon fontSet="material" #target="tooltipTarget" [igxTooltipTarget]="tooltipRef">chevron_right</igx-icon>
+                <span class="icon-span">
+                    Logout
+                </span>
+            </a>
+            
         </igx-navbar>
     </div>
     <div class="content-wrap">

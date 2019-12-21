@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LoginService } from 'src/app/service/login.service';
+import { Router} from '@angular/router';
 class User {
   username: string;
   password: string;
@@ -18,7 +19,8 @@ export class LoginComponent implements OnInit {
   crendtialsIsIncorrect: boolean
   constructor(
     private fromBuilder: FormBuilder,
-    private loginService: LoginService
+    private loginService: LoginService,
+    private route: Router
   ) { 
     this.hidePassword = true;
     this.crendtialsIsIncorrect = false;
@@ -32,8 +34,6 @@ export class LoginComponent implements OnInit {
   }
   
   onSubmit() {
-    // console.log('Username: ', this.loginForm.get('username').value);
-    // console.log('Password: ', this.loginForm.get('password').value);
     const credentials = {
       username: this.loginForm.get('username').value,
       password: this.loginForm.get('password').value
@@ -44,7 +44,8 @@ export class LoginComponent implements OnInit {
           this.crendtialsIsIncorrect = true;
         } else
         {
-          console.log('Login success');
+          localStorage.setItem('authData', JSON.stringify(data.data));
+          this.route.navigate(['newsfeed']);
         }
       }
     );
