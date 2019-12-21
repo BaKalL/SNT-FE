@@ -1,0 +1,22 @@
+.post {
+    box-shadow: 1px 1px 3px 0px;
+}
+.stt-btn {
+    font-size: 13px;
+    padding: 0;
+}
+
+.post-actions {
+    width: 100%;
+}
+.post-actions div {
+    width: 100%;
+}
+
+.action-btn{
+    width: 33%;
+    margin: 0;
+}
+::ng-deep .igx-card-actions__buttons {
+    width: 100%;
+}

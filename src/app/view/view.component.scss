@@ -1,0 +1,89 @@
+.content-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: 30px 0;
+}
+
+::ng-deep .igx-navbar {
+    background: #1d4242;
+    color: white;
+    
+}
+::ng-deep .navbar {
+    padding: 0;
+}
+::ng-deep .igx-navbar__left igx-icon:hover {
+    color: white;
+}
+::ng-deep .igx-navbar__left igx-icon {
+    color: white;
+}
+::ng-deep .igx-navbar__title{
+    padding: 20px;
+    color: #1d4242;
+    background: white;
+    box-shadow: 1px 3px 5px;
+}
+footer {
+    text-align: center;
+    color: white;
+    background: #1d4242 ;
+    font-size: 11px;
+    padding: 4px;
+}
+.menu {
+    width: 20%;
+}
+.content-container {
+    width: 60%;
+}
+// ::ng-deep .igx-navbar__right igx-icon {
+//     color: white!important;
+// }
+
+::ng-deep .igx-navbar__right igx-icon {
+    color: white
+}
+
+::ng-deep .igx-list__item-base {
+    color: white;
+    background: #1d4242;
+    font-size: 12px;
+}
+
+::ng-deep .igx-card {
+    border-radius: 0px!important;
+}
+// ::ng-deep .igx-list__item-base:first-child:hover {
+//     background: #1d4242;
+// }
+::ng-deep .igx-list {
+    background: #1d4242;
+}
+::ng-deep .igx-input-group__border {
+    background: white;
+}
+::ng-deep .igx-input-group__input, .igx-input-group__textarea, .igx-input-group__label {
+    color: white;
+}
+
+::ng-deep .igx-input-group__bundle {
+    padding: 0px!important;
+}
+
+::ng-deep .igx-input-group--search .igx-input-group__bundle-main {
+    padding: 0px 10px;
+    height: 20px;
+}
+::ng-deep .igx-navbar__right igx-icon:hover {
+    color: white;
+}
+
+#search-ico {
+    color: black;
+    font-weight: 800;
+}
+
+
+

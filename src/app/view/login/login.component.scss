@@ -1,0 +1,14 @@
+.login-card {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 50px;
+    padding: 20px;
+}
+.validator-span {
+    color: red;
+    font-size: 12px;
+    font-style: italic;
+}
+::ng-deep .igx-card-actions__buttons {
+    width: 100%;
+}

@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <form class="login-card" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <igx-card style="padding: 20px;">
+            <igx-card-header>
+                <h3 style="text-align: center;" igxCardHeaderTitle>Login</h3><br>
+            </igx-card-header>
+            <span *ngIf="crendtialsIsIncorrect" style="color: red; text-align: center;">Your username or password is incorrect.</span>
+            <igx-card-content>
+                <igx-input-group>
+                    <label igxLabel for="username">Username</label>
+                    <input igxInput name="username" type="text" formControlName="username" />
+                    <igx-suffix>
+                        <igx-icon>person</igx-icon>
+                    </igx-suffix>
+                </igx-input-group>
+                <span *ngIf="loginForm.controls.username?.errors?.required && loginForm.controls.username?.touched" class="validator-span">Please enter your username.</span>
+                <igx-input-group>
+                    <label igxLabel for="password">Password</label>
+                    <input igxInput name="password" [type]="hidePassword ? 'password' : 'text'" formControlName="password"/>
+                    <igx-suffix>
+                        <igx-icon (click)="hidePassword = !hidePassword">{{hidePassword ? 'visibility_off' : 'visibility'}}</igx-icon>
+                    </igx-suffix>
+                </igx-input-group>
+                <span *ngIf="loginForm.controls.password?.errors?.required && loginForm.controls.password?.touched" class="validator-span">Please enter your password.</span>
+            </igx-card-content>
+            <igx-card-actions>
+                <button style="width: 100%;background: #09f; color: white;" igxButton="raised" igxRipple>Login</button>
+            </igx-card-actions>
+        </igx-card>
+    </form>
+
+</div>
