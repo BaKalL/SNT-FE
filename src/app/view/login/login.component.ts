@@ -45,6 +45,7 @@ export class LoginComponent implements OnInit {
         } else
         {
           localStorage.setItem('authData', JSON.stringify(data.data));
+          document.cookie = "authData=" + JSON.stringify(data.data);
           this.route.navigate(['newsfeed']);
         }
       }

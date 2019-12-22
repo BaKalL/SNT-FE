@@ -12,4 +12,8 @@ export class MainComponent implements OnInit {
   ngOnInit() {
   }
 
+  readCookie () {
+    console.log('Your cookie: ', document.cookie);
+  }
+
 }
