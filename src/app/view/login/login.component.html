@@ -24,7 +24,20 @@
                 <span *ngIf="loginForm.controls.password?.errors?.required && loginForm.controls.password?.touched" class="validator-span">Please enter your password.</span>
             </igx-card-content>
             <igx-card-actions>
-                <button style="width: 100%;background: #09f; color: white;" igxButton="raised" igxRipple>Login</button>
+               
+                <div style="width:100%;">
+                    <igx-checkbox  [checked]="loginForm.rememberMe">
+                        Remember me
+                    </igx-checkbox>
+                    <p style="float: right;">
+                        <a href="#">Forgot password ?</a> or <a href="#">Sign up</a>
+                    </p>
+                    
+                </div>
+                <div style="width:100%;">
+                    <button style="width: 100%;background: #09f; color: white;" igxButton="raised" igxRipple>Login</button>
+                </div> 
+                
             </igx-card-actions>
         </igx-card>
     </form>

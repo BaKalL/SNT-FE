@@ -4,7 +4,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { 
-    IgxGridModule, IgxCardModule, IgxIconModule, IgxInputGroupModule, IgxButtonModule
+    IgxGridModule,
+    IgxCardModule,
+    IgxIconModule,
+    IgxInputGroupModule,
+    IgxButtonModule,
+    IgxCheckboxModule
 } from 'igniteui-angular';
 const route: Routes = [
     { path: '', component: LoginComponent }
@@ -20,6 +25,7 @@ const route: Routes = [
         IgxCardModule,
         IgxInputGroupModule,
         IgxButtonModule,
+        IgxCheckboxModule,
         RouterModule.forChild(route),
         IgxGridModule
     ],

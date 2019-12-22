@@ -5,6 +5,7 @@ import { Router} from '@angular/router';
 class User {
   username: string;
   password: string;
+  rememberMe: boolean;
 }
 @Component({
   selector: 'app-login',
@@ -17,6 +18,7 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup
   hidePassword: boolean;
   crendtialsIsIncorrect: boolean
+
   constructor(
     private fromBuilder: FormBuilder,
     private loginService: LoginService,
@@ -27,6 +29,7 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.fromBuilder.group({
       username: this.fromBuilder.control('', Validators.required),
       password: this.fromBuilder.control('', Validators.required),
+      rememberMe: false
     });
   }
 
