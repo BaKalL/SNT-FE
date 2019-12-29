@@ -14,7 +14,7 @@ export class LoginService {
 
   }
 
-  url = 'http://localhost:8080/user/sigin'
+  url = 'http://localhost:8080/user/login'
 
 
   login(credentials): Observable<any> {

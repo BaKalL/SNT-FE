@@ -47,8 +47,8 @@ export class LoginComponent implements OnInit {
           this.crendtialsIsIncorrect = true;
         } else
         {
-          localStorage.setItem('authData', JSON.stringify(data.data));
-          document.cookie = "authData=" + JSON.stringify(data.data);
+          console.log('Result: ', data);
+          localStorage.setItem('auth_user', JSON.stringify(data.data));
           this.route.navigate(['newsfeed']);
         }
       }
