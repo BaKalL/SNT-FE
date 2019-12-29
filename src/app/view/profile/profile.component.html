@@ -119,14 +119,14 @@
                     <igx-list class="tab-item">
                         <igx-list-item [isHeader]="true">Groups</igx-list-item>
                 
-                        <igx-list-item class="friends-item" igxRipple="black" igxRippleTarget=".igx-list__item-content" *ngFor="let group of groups">
+                        <igYx-list-item class="friends-item" igxRipple="black" igxRippleTarget=".igx-list__item-content" *ngFor="let group of groups">
                                 <igx-avatar igxListThumbnail [src]="group.avatar" roundShape="true"></igx-avatar>
                                 <button igxButton="flat" class="name">{{group.name}}</button>
                                 <button class="more-vert-btn" igxButton="icon" igxRipple igxRippleCentered="true">
                                     <igx-icon fontSet="material">more_vert</igx-icon>
                                 </button>
                                 <hr>
-                        </igx-list-item>
+                        </igYx-list-item>
                 
                         <!-- <igx-snackbar actionText="Undo" (onAction)="restore()">Contact deleted</igx-snackbar> -->
                     </igx-list>
