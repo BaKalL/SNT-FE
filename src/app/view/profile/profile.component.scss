@@ -1,0 +1,41 @@
+.post {
+    box-shadow: 1px 1px 3px 0px;
+}
+
+.post-actions {
+    width: 100%;
+}
+::ng-deep .igx-card-actions__buttons {
+    width: 100%;
+}
+.action-btn{
+    width: 33%;
+    margin: 0;
+}
+.post-header {
+    position: relative;
+}
+.post-icon {
+    position: absolute;
+    right: 10px;
+}
+::ng-deep .igx-avatar--large {
+    height: 200px;
+    width: 200px;
+    border: 5px solid #20c997;
+}
+.stt-btn {
+    font-size: 13px;
+    padding: 0;
+}
+
+.user-avatar-header-card {
+    position: absolute;
+    width: 100%;
+    top: 150px;
+    background: none;
+}
+
+.user-background-header-card {
+    height: 300px;
+}

@@ -1,0 +1,73 @@
+<igx-card class="content-container">
+    <igx-card style="position: relative;min-height: 425px;box-shadow: 0 0 0;">
+        <igx-card class="user-background-header-card">
+            <igx-card-media>
+                <img src="../../../assets/img/img-1.jpg">
+            </igx-card-media>
+        </igx-card>
+        <igx-card class="user-avatar-header-card ">
+            <igx-card-header style="text-align: center;">
+                <igx-avatar size="large" src="../../../assets/img/user.png" roundShape="true"></igx-avatar>
+                <h2 style="margin-top: 140px;"><a href="#">Hiếu Phạm</a></h2>
+            </igx-card-header>
+        </igx-card>
+    </igx-card>
+    <igx-tabs>
+        <igx-tabs-group label="Home">
+            <igx-card>
+                <igx-card-header>
+                    <!-- <img src="../../../assets/img/user.png" alt=""> -->
+                    <igx-avatar src="../../../assets/img/user.png" roundShape="true"></igx-avatar>
+                    <h6><a href="#">Hiếu Phạm</a></h6>
+                    <igx-input-group style="width: 100%;">
+                        <input type="textarea" #input1 igxInput placeholder="What do you think ?" />
+                    </igx-input-group>
+                </igx-card-header>
+                <igx-card-actions style="position: relative;">
+                    <button igxButton="raised" class="stt-btn" igxButtonColor="white"
+                        igxButtonBackground="red">Cancel</button>
+                    <button style="position: absolute; right: .5em;" class="stt-btn" igxButton="raised"
+                        igxButtonColor="white" igxButtonBackground="#007bff">Post</button>
+                </igx-card-actions>
+            </igx-card>
+
+            <igx-card class="post">
+                <igx-card-header class="post-header">
+                    <!-- <img src="../../../assets/img/user.png" alt=""> -->
+                    <igx-avatar src="../../../assets/img/user.png" roundShape="true"></igx-avatar>
+                    <h6><a href="#">Hiếu Phạm</a></h6>
+                    <igx-icon class="post-icon">keyboard_arrow_down</igx-icon>
+                </igx-card-header>
+                <igx-card-content>
+                    <p>
+                        Any image or video we want to show in the card, we wrap inside the igx-card-media tags.
+                        The igx-card-media allows us to size the content placed inside via the width and height
+                        attributes.
+                        In the example above we provided just height, which would leave the width to auto, thus
+                        allowing
+                        the
+                        image to stretch across the entire card surface, while maintaining the set height.
+                    </p>
+                    <igx-card-media>
+                        <img src="../../../assets/img/img-1.jpg">
+                    </igx-card-media>
+                </igx-card-content>
+                <igx-card-actions class="post-actions">
+                    <button class="action-btn" igxButton="outlined" igxButtonColor="black" igxButtonBackground="white">
+                        <igx-icon fontSet="material">thumb_up</igx-icon>
+                    </button>
+                    <button class="action-btn" igxButton="outlined" igxButtonColor="black" igxButtonBackground="white">
+                        <igx-icon fontSet="material">comment</igx-icon>
+                    </button>
+                    <button class="action-btn" igxButton="outlined" igxButtonColor="black" igxButtonBackground="white">
+                        <igx-icon fontSet="material">screen_share</igx-icon>
+                    </button>
+                </igx-card-actions>
+            </igx-card>
+        </igx-tabs-group>
+        <igx-tabs-group label="My friends">Friends</igx-tabs-group>
+        <igx-tabs-group label="Groups">Groups</igx-tabs-group>
+        <igx-tabs-group label="Albums">Images</igx-tabs-group>
+    </igx-tabs>
+
+</igx-card>

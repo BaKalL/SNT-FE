@@ -16,15 +16,17 @@ import {
     IgxCardModule ,
     IgxInputGroupModule,
     IgxAvatarModule ,
-    IgxDropDownModule 
+    IgxDropDownModule ,
  } from 'igniteui-angular';
+import { ProfileComponent } from './profile/profile.component';
 
 const appRoutes: Routes = [
     { 
         path: '', component: ViewComponent, children:
         [
             {path: '', redirectTo: 'newsfeed', pathMatch: 'full'},
-            {path: 'newsfeed', component: MainComponent}
+            {path: 'newsfeed', component: MainComponent},
+            {path: 'profile/:id', component: ProfileComponent}
         ]
     }
 
@@ -33,7 +35,8 @@ const appRoutes: Routes = [
 @NgModule({
     declarations: [
         ViewComponent,
-        MainComponent
+        MainComponent,
+        ProfileComponent
     ],
     imports: [
         CommonModule,
