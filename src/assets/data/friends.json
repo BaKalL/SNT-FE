@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Cậu Vàng",
+        "id": "2",
+        "avatar": "../../../assets/img/cau-vang.png"
+    },
+    {
+        "name": "Vladimir Putin",
+        "id": "3",
+        "avatar": "../../../assets/img/putin.jpg"
+    },
+    {
+        "name": "Gavin Thomas",
+        "id": "4",
+        "avatar": "../../../assets/img/gavin-1.jpg"
+    },
+    {
+        "name": "Gavin Đang NGhỉ Tết",
+        "id": "5",
+        "avatar": "../../../assets/img/gavin-2.jpg"
+    },
+    {
+        "name": "Chipu",
+        "id": "6",
+        "avatar": "../../../assets/img/chipu.jpg"
+    }
+]

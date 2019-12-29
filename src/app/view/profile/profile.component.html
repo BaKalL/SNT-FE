@@ -36,18 +36,30 @@
                     <!-- <img src="../../../assets/img/user.png" alt=""> -->
                     <igx-avatar src="../../../assets/img/user.png" roundShape="true"></igx-avatar>
                     <h6><a href="#">Hiếu Phạm</a></h6>
-                    <igx-icon class="post-icon">keyboard_arrow_down</igx-icon>
+                    <button class="more-vert-btn" igxButton="icon" igxRipple igxRippleCentered="true">
+                        <igx-icon fontSet="material">more_vert</igx-icon>
+                    </button>
+                    <!-- <igx-icon class="post-icon">keyboard_arrow_down</igx-icon> -->
                 </igx-card-header>
-                <igx-card-content>
-                    <p>
-                        Any image or video we want to show in the card, we wrap inside the igx-card-media tags.
-                        The igx-card-media allows us to size the content placed inside via the width and height
-                        attributes.
-                        In the example above we provided just height, which would leave the width to auto, thus
-                        allowing
-                        the
-                        image to stretch across the entire card surface, while maintaining the set height.
-                    </p>
+                <igx-card-content >
+                    <div class="post-container">
+                        <p class="post-content">
+                            Any image or video we want to show in the card, we wrap inside the igx-card-media tags.
+                            The igx-card-media allows us to size the content placed inside via the width and height
+                            attributes.
+                            In the example above we provided just height, which would leave the width to auto, thus
+                            allowing
+                            the
+                            image to stretch across the entire card surface, while maintaining the set height.
+                            Any image or video we want to show in the card, we wrap inside the igx-card-media tags.
+                            The igx-card-media allows us to size the content placed inside via the width and height
+                            attributes.
+                            In the example above we provided just height, which would leave the width to auto, thus
+                            allowing
+                            the
+                            image to stretch across the entire card surface, while maintaining the set height.
+                        </p>
+                    </div>
                     <igx-card-media>
                         <img src="../../../assets/img/img-1.jpg">
                     </igx-card-media>
@@ -65,9 +77,96 @@
                 </igx-card-actions>
             </igx-card>
         </igx-tabs-group>
-        <igx-tabs-group label="My friends">Friends</igx-tabs-group>
-        <igx-tabs-group label="Groups">Groups</igx-tabs-group>
-        <igx-tabs-group label="Albums">Images</igx-tabs-group>
+        <igx-tabs-group label="My friends">
+            <igx-card>
+                <igx-card-header>
+                    <igx-input-group type="search" style="width:100%;">
+                        <input #friendInput igxInput placeholder="Find your friends" />
+                        <igx-suffix>
+                            <igx-icon id="search-ico" style="color: black;">search</igx-icon>
+                        </igx-suffix>
+                    </igx-input-group>
+                </igx-card-header>
+                <igx-card-content>
+                    <igx-list class="tab-item">
+                        <igx-list-item [isHeader]="true">Friends</igx-list-item>
+                
+                        <igx-list-item class="friends-item" igxRipple="black" igxRippleTarget=".igx-list__item-content" *ngFor="let friend of friends">
+                                <igx-avatar igxListThumbnail [src]="friend.avatar" roundShape="true"></igx-avatar>
+                                <button igxButton="flat" class="name">{{friend.name}}</button>
+                                <button class="more-vert-btn" igxButton="icon" igxRipple igxRippleCentered="true">
+                                    <igx-icon fontSet="material">more_vert</igx-icon>
+                                </button>
+                                <hr>
+                        </igx-list-item>
+                
+                        <!-- <igx-snackbar actionText="Undo" (onAction)="restore()">Contact deleted</igx-snackbar> -->
+                    </igx-list>
+                </igx-card-content>
+            </igx-card>
+        </igx-tabs-group>
+        <igx-tabs-group label="Groups">
+            <igx-card>
+                <igx-card-header>
+                    <igx-input-group type="search" style="width:100%;">
+                        <input #friendInput igxInput placeholder="Find your groups" />
+                        <igx-suffix>
+                            <igx-icon id="search-ico" style="color: black;">search</igx-icon>
+                        </igx-suffix>
+                    </igx-input-group>
+                </igx-card-header>
+                <igx-card-content>
+                    <igx-list class="tab-item">
+                        <igx-list-item [isHeader]="true">Groups</igx-list-item>
+                
+                        <igx-list-item class="friends-item" igxRipple="black" igxRippleTarget=".igx-list__item-content" *ngFor="let group of groups">
+                                <igx-avatar igxListThumbnail [src]="group.avatar" roundShape="true"></igx-avatar>
+                                <button igxButton="flat" class="name">{{group.name}}</button>
+                                <button class="more-vert-btn" igxButton="icon" igxRipple igxRippleCentered="true">
+                                    <igx-icon fontSet="material">more_vert</igx-icon>
+                                </button>
+                                <hr>
+                        </igx-list-item>
+                
+                        <!-- <igx-snackbar actionText="Undo" (onAction)="restore()">Contact deleted</igx-snackbar> -->
+                    </igx-list>
+                </igx-card-content>
+            </igx-card>
+        </igx-tabs-group>
+        <igx-tabs-group label="Albums">
+            <igx-card>
+                <igx-card-header style="display: flex;flex-wrap: wrap;">
+                    <igx-card class="album-thumb">
+                        <igx-card-media height="100px">
+                            <img src="../../../assets/img/img-1.jpg">
+                        </igx-card-media>
+                        <igx-card-header>
+                            <h6 igxCardHeaderTitle><a>Avatars</a></h6>
+                            <span igxCardHeaderSubtitle>1 images</span>
+                        </igx-card-header>
+                    </igx-card>
+                    <igx-card class="album-thumb">
+                        <igx-card-media height="100px">
+                            <img src="../../../assets/img/img-2.jpg">
+                        </igx-card-media>
+                        <igx-card-header>
+                            <h6 igxCardHeaderTitle><a>Backgrounds</a></h6>
+                            <span igxCardHeaderSubtitle>10 images</span>
+                        </igx-card-header>
+                    </igx-card>
+                    <igx-card class="album-thumb">
+                        <igx-card-media height="100px">
+                            <img src="../../../assets/img/img-3.jpg">
+                        </igx-card-media>
+                        <igx-card-header>
+                            <h6 igxCardHeaderTitle><a>Myth</a></h6>
+                            <span igxCardHeaderSubtitle>1 images</span>
+                        </igx-card-header>
+                    </igx-card>
+                </igx-card-header>
+            </igx-card>
+            
+        </igx-tabs-group>
     </igx-tabs>
 
 </igx-card>

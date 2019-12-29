@@ -1,12 +1,21 @@
 .post {
     box-shadow: 1px 1px 3px 0px;
 }
-
+.post .more-vert-btn {
+    position: absolute;
+    right: 10px;
+}
 .post-actions {
     width: 100%;
 }
 ::ng-deep .igx-card-actions__buttons {
     width: 100%;
+}
+.post-content {
+    text-overflow: ellipsis;
+    height: 100px;
+    white-space: nowrap; 
+    overflow: hidden;
 }
 .action-btn{
     width: 33%;
@@ -15,9 +24,11 @@
 .post-header {
     position: relative;
 }
-.post-icon {
-    position: absolute;
-    right: 10px;
+::ng-deep .tab-item .igx-list__item-base {
+    background: white;
+}
+::ng-deep .tab-item .igx-list__item-base:hover{
+    background: whitesmoke;
 }
 ::ng-deep .igx-avatar--large {
     height: 200px;
@@ -38,4 +49,28 @@
 
 .user-background-header-card {
     height: 300px;
+}
+::ng-deep .igx-avatar--small {
+    margin-right: 10px ;
+}
+.tab-item {
+
+}
+
+.album-thumb {
+    width: 24%;
+    margin-right: 10px;
+}
+
+.name {
+    color: black;
+}
+
+.friends-item {
+    position: relative;
+}
+
+.friends-item .more-vert-btn {
+    position: absolute;
+    right: 0;
 }

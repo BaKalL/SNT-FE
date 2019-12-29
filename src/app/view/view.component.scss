@@ -20,7 +20,7 @@
     color: white;
 }
 ::ng-deep .igx-navbar__title{
-    padding: 20px;
+    padding: 0px 20px;
     color: #1d4242;
     background: white;
     box-shadow: 1px 3px 5px;
@@ -34,6 +34,10 @@ footer {
 }
 .menu {
     width: 20%;
+    background: #1d4242;
+    height: 100vh;
+    position: sticky;
+    top: 56px;
 }
 .content-container {
     width: 60%;
@@ -85,5 +89,11 @@ footer {
     font-weight: 800;
 }
 
-
+.navbar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 56px;
+}
 

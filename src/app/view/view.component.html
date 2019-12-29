@@ -1,5 +1,5 @@
-<div class="container-fluid" style="padding: 20px 0px;background: #f7f5f5;">
-    <div class="navbar" igxLayout style="display:flex">
+<div class="container-fluid" style="background: #f7f5f5;">
+    <div class="navbar" igxLayout>
         <igx-navbar style="width: 100%;" title="H" igxFlex>
             <igx-input-group type="search">
                 <input #input1 igxInput placeholder="Search" />
@@ -7,14 +7,17 @@
                     <igx-icon id="search-ico" style="color: black;">search</igx-icon>
                 </igx-suffix>
             </igx-input-group>
-
+            <div>
+                <igx-avatar src="../../../assets/img/user.png" roundShape="true" size="small"></igx-avatar>
+                <a (click)="navigate()" style="color: white;">Hiếu Phạm</a>
+            </div>
             <igx-icon fontSet="material">notification_important</igx-icon>
             <igx-icon fontSet="material">swap_horiz</igx-icon>
             <igx-icon fontSet="material">chevron_right</igx-icon>
         </igx-navbar>
     </div>
     <div class="content-wrap">
-        <igx-card class="menu" style="background: #1d4242;height: 100vh;position: sticky;top: 0;">
+        <igx-card class="menu" >
             <igx-list>
                 <igx-list-item igxRipple igxRippleTarget=".igx-list__item-content">Home</igx-list-item>
                 <igx-list-item igxRipple igxRippleTarget=".igx-list__item-content">News Feed</igx-list-item>
@@ -27,7 +30,4 @@
         </div>
 
     </div>
-
-
-    <footer style="text-align: center;">ozzzkonzzzo@gmail.com</footer>
 </div>
