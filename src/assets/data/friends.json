@@ -2,26 +2,31 @@
     {
         "name": "Cậu Vàng",
         "id": "2",
-        "avatar": "../../../assets/img/cau-vang.png"
+        "avatar": "../../../assets/img/cau-vang.png",
+        "status": {"block":"false", "follow":"true"}
     },
     {
         "name": "Vladimir Putin",
         "id": "3",
-        "avatar": "../../../assets/img/putin.jpg"
+        "avatar": "../../../assets/img/putin.jpg",
+        "status": {"block":"false", "follow":"true"}
     },
     {
         "name": "Gavin Thomas",
         "id": "4",
-        "avatar": "../../../assets/img/gavin-1.jpg"
+        "avatar": "../../../assets/img/gavin-1.jpg",
+        "status": {"block":"false", "follow":"false"}
     },
     {
         "name": "Gavin Đang NGhỉ Tết",
         "id": "5",
-        "avatar": "../../../assets/img/gavin-2.jpg"
+        "avatar": "../../../assets/img/gavin-2.jpg",
+        "status": {"block":"false", "follow":"false"}
     },
     {
         "name": "Chipu",
         "id": "6",
-        "avatar": "../../../assets/img/chipu.jpg"
+        "avatar": "../../../assets/img/chipu.jpg",
+        "status": {"block":"true", "follow":"true"}
     }
 ]

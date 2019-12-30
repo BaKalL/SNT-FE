@@ -90,13 +90,23 @@
                 <igx-card-content>
                     <igx-list class="tab-item">
                         <igx-list-item [isHeader]="true">Friends</igx-list-item>
-                
+                        
                         <igx-list-item class="friends-item" igxRipple="black" igxRippleTarget=".igx-list__item-content" *ngFor="let friend of friends">
                                 <igx-avatar igxListThumbnail [src]="friend.avatar" roundShape="true"></igx-avatar>
                                 <button igxButton="flat" class="name">{{friend.name}}</button>
-                                <button class="more-vert-btn" igxButton="icon" igxRipple igxRippleCentered="true">
-                                    <igx-icon fontSet="material">more_vert</igx-icon>
-                                </button>
+                                <div class="more-vert-btn">
+                                    <button (click)="changeFollowStatus(friend.id)" [ngClass]="{'unfollow': friend.status.follow ==='false'}"  igxButton="icon" igxRipple igxRippleCentered="true">
+                                        <igx-icon fontSet="material">{{friend.status.follow ==='false' ? 'visibility_off' : 'visibility'}}</igx-icon>
+                                    </button>
+                                    <button (click)="changeBlockStatus(friend.id)" [ngClass]="{'blocked': friend.status.block ==='true'}" igxButton="icon" igxRipple igxRippleCentered="true">
+                                        <igx-icon fontSet="material">block</igx-icon>
+                                    </button>
+                                    
+                                    <button (click)="dialog.open()" (click)="unfriend(friend.id)" igxButtonColor="red" igxButton="icon" igxRipple igxRippleCentered="true">
+                                        <igx-icon fontSet="material">remove_circle_outline</igx-icon>
+                                    </button>
+                                </div>
+                                
                                 <hr>
                         </igx-list-item>
                 
@@ -119,14 +129,14 @@
                     <igx-list class="tab-item">
                         <igx-list-item [isHeader]="true">Groups</igx-list-item>
                 
-                        <igYx-list-item class="friends-item" igxRipple="black" igxRippleTarget=".igx-list__item-content" *ngFor="let group of groups">
+                        <igx-list-item class="friends-item" igxRipple="black" igxRippleTarget=".igx-list__item-content" *ngFor="let group of groups">
                                 <igx-avatar igxListThumbnail [src]="group.avatar" roundShape="true"></igx-avatar>
                                 <button igxButton="flat" class="name">{{group.name}}</button>
-                                <button class="more-vert-btn" igxButton="icon" igxRipple igxRippleCentered="true">
-                                    <igx-icon fontSet="material">more_vert</igx-icon>
+                                <button igxButtonColor="red" class="more-vert-btn" igxButton="icon" igxRipple igxRippleCentered="true">
+                                    <igx-icon fontSet="material">exit_to_app</igx-icon>
                                 </button>
                                 <hr>
-                        </igYx-list-item>
+                        </igx-list-item>
                 
                         <!-- <igx-snackbar actionText="Undo" (onAction)="restore()">Contact deleted</igx-snackbar> -->
                     </igx-list>
@@ -168,5 +178,11 @@
             
         </igx-tabs-group>
     </igx-tabs>
-
+    <igx-dialog #dialog title="Confirmation"
+        leftButtonLabel="Cancel"
+        (onLeftButtonSelect)="dialog.close()"
+        rightButtonLabel="OK"
+        (onRightButtonSelect)="confirmUnfriend()"
+        message="Are you sure you want to unfriend ?">
+    </igx-dialog>
 </igx-card>

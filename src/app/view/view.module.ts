@@ -13,11 +13,14 @@ import {
     IgxNavbarModule,
     IgxTabsModule ,
     IgxListModule ,
+    IgxTooltipModule,
     IgxCardModule ,
     IgxInputGroupModule,
     IgxAvatarModule ,
     IgxDropDownModule ,
-    IgxSnackbarModule
+    IgxSnackbarModule,
+    IgxBannerModule ,
+    IgxDialogModule
  } from 'igniteui-angular';
 import { ProfileComponent } from './profile/profile.component';
 
@@ -41,8 +44,11 @@ const appRoutes: Routes = [
     ],
     imports: [
         CommonModule,
+        IgxDialogModule,
         IgxNavigationDrawerModule,
         IgxButtonModule,
+        IgxBannerModule,
+        IgxTooltipModule,
         IgxSnackbarModule,
         IgxAvatarModule ,
         IgxTabsModule ,
