@@ -19,9 +19,12 @@ const appRoutes: Routes = [
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    HttpClientModule ,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}

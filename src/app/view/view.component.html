@@ -1,40 +1,41 @@
-<div class="container-fluid" style="background: #f7f5f5;">
-    <div class="navbar" igxLayout>
-        <igx-navbar style="width: 100%;" title="H" igxFlex>
+<div class="container-fluid" style="padding: 20px 0px;background: #f7f5f5;">
+    <div class="navbar"  igxLayout style="display:flex">
+        <igx-navbar title="H" style="width: 100%;"  igxFlex>
             <igx-input-group type="search">
                 <input #input1 igxInput placeholder="Search" />
                 <igx-suffix>
                     <igx-icon id="search-ico" style="color: black;">search</igx-icon>
                 </igx-suffix>
             </igx-input-group>
-            <button  igxButton="icon" igxRipple igxRippleCentered="true">
-                <igx-icon fontSet="material">event_note</igx-icon>
-            </button>
-            <div>
-                <igx-avatar src="../../../assets/img/user.png" roundShape="true" size="small"></igx-avatar>
-                <a (click)="navigate()" style="color: white;">Hiếu Phạm</a>
-            </div>
-            
-            <button  igxButton="icon" igxRipple igxRippleCentered="true">
-                <igx-icon fontSet="material">notification_important</igx-icon>
-            </button>
-
-            <button  igxButton="icon" igxRipple igxRippleCentered="true">
-                <igx-icon fontSet="material">swap_horiz</igx-icon>
-            </button>
-
-            <button  igxButton="icon" igxRipple igxRippleCentered="true">
-                <igx-icon fontSet="material">exit_to_app</igx-icon>
-            </button>
-
-            
-            
-            
+            <a class="navbar-link" href="#">
+                <igx-avatar src="../../assets/img/user.png" style="width: 25px; height: 25px; min-width: 25px;" roundShape="true"></igx-avatar>
+                <span class="icon-span">
+                    Profile
+                </span>
+            </a>
+            <a class="navbar-link" href="#">
+                <igx-icon fontSet="material" #target="tooltipTarget" [igxTooltipTarget]="tooltipRef">notification_important</igx-icon>
+                <span class="icon-span">
+                    Notify
+                </span>
+            </a>
+            <a class="navbar-link" href="#">
+                <igx-icon fontSet="material" #target="tooltipTarget" [igxTooltipTarget]="tooltipRef">swap_horiz</igx-icon>
+                <span class="icon-span">
+                    Switch account
+                </span>
+            </a>
+            <a class="navbar-link" href="#" (click)="logout()">
+                <igx-icon fontSet="material" #target="tooltipTarget" [igxTooltipTarget]="tooltipRef">chevron_right</igx-icon>
+                <span class="icon-span">
+                    Logout
+                </span>
+            </a>
             
         </igx-navbar>
     </div>
     <div class="content-wrap">
-        <igx-card class="menu" >
+        <igx-card class="menu" style="background: #1d4242;height: 100vh;position: sticky;top: 0;">
             <igx-list>
                 <igx-list-item igxRipple igxRippleTarget=".igx-list__item-content">Home</igx-list-item>
                 <igx-list-item igxRipple igxRippleTarget=".igx-list__item-content">News Feed</igx-list-item>
@@ -47,4 +48,7 @@
         </div>
 
     </div>
+
+
+    <footer style="text-align: center;">ozzzkonzzzo@gmail.com</footer>
 </div>
