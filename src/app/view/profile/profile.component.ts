@@ -66,12 +66,11 @@ export class ProfileComponent implements OnInit {
     });
   }
 
-  unfriend (userId) {
-    this.deleteIdTmp = userId;
-    console.log('Unf: ', this.deleteIdTmp);
+  setDeleteTmpId (id) {
+    this.deleteIdTmp = id;
   }
 
-  confirmUnfriend() {
+  confirmUnfriend(event) {
     const result = this.friends.findIndex(friend => {
       return friend.id === this.deleteIdTmp;
      });
@@ -80,6 +79,19 @@ export class ProfileComponent implements OnInit {
 
      this.deleteIdTmp = null;
     
+     event.dialog.close();
+  }
+
+  confirmLeaveGroup(event) {
+    const result = this.groups.findIndex(friend => {
+      return friend.id === this.deleteIdTmp;
+     });
+
+     this.groups.splice(result,1);
+
+     this.deleteIdTmp = null;
+    
+     event.dialog.close();
   }
 
   ngOnInit() {
