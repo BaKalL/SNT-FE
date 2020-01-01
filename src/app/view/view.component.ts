@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../service/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view',
@@ -9,11 +10,17 @@ import { LoginService } from '../service/login.service';
 export class ViewComponent implements OnInit {
 
   constructor(
-    private loginService: LoginService
+    private loginService: LoginService,
+    private router: Router
   ) { }
 
   ngOnInit() {
   }
+
+  profileNavigate() {
+    this.router.navigate(['/profile/1']);
+  }
+
   logout () {
     this.loginService.logout();
     

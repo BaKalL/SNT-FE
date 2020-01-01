@@ -42,9 +42,6 @@ footer {
 .content-container {
     width: 60%;
 }
-// ::ng-deep .igx-navbar__right igx-icon {
-//     color: white!important;
-// }
 
 ::ng-deep .igx-navbar__right igx-icon {
     color: white;
@@ -60,9 +57,6 @@ footer {
 ::ng-deep .igx-card {
     border-radius: 0px!important;
 }
-// ::ng-deep .igx-list__item-base:first-child:hover {
-//     background: #1d4242;
-// }
 ::ng-deep .igx-list {
     background: #1d4242;
 }

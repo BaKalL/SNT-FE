@@ -1,4 +1,4 @@
-<div class="container-fluid" style="padding: 20px 0px;background: #f7f5f5;">
+<div class="container-fluid" style="background: #f7f5f5;">
     <div class="navbar"  igxLayout style="display:flex">
         <igx-navbar title="H" style="width: 100%;"  igxFlex>
             <igx-input-group type="search">
@@ -7,7 +7,13 @@
                     <igx-icon id="search-ico" style="color: black;">search</igx-icon>
                 </igx-suffix>
             </igx-input-group>
-            <a class="navbar-link" href="#">
+            <a class="navbar-link" href="/newsfeed">
+                <igx-icon fontSet="material" #target="tooltipTarget" [igxTooltipTarget]="tooltipRef">event_note</igx-icon>
+                <span class="icon-span">
+                    NewsFeed
+                </span>
+            </a>
+            <a class="navbar-link" (click)="profileNavigate()">
                 <igx-avatar src="../../assets/img/user.png" style="width: 25px; height: 25px; min-width: 25px;" roundShape="true"></igx-avatar>
                 <span class="icon-span">
                     Profile
@@ -26,7 +32,7 @@
                 </span>
             </a>
             <a class="navbar-link" href="#" (click)="logout()">
-                <igx-icon fontSet="material" #target="tooltipTarget" [igxTooltipTarget]="tooltipRef">chevron_right</igx-icon>
+                <igx-icon fontSet="material" #target="tooltipTarget" [igxTooltipTarget]="tooltipRef">exit_to_app</igx-icon>
                 <span class="icon-span">
                     Logout
                 </span>
@@ -35,7 +41,7 @@
         </igx-navbar>
     </div>
     <div class="content-wrap">
-        <igx-card class="menu" style="background: #1d4242;height: 100vh;position: sticky;top: 0;">
+        <igx-card class="menu" style="background: #1d4242;height: 100vh;position: sticky;top: 56px;">
             <igx-list>
                 <igx-list-item igxRipple igxRippleTarget=".igx-list__item-content">Home</igx-list-item>
                 <igx-list-item igxRipple igxRippleTarget=".igx-list__item-content">News Feed</igx-list-item>
@@ -48,7 +54,4 @@
         </div>
 
     </div>
-
-
-    <footer style="text-align: center;">ozzzkonzzzo@gmail.com</footer>
 </div>

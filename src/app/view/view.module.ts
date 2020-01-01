@@ -17,9 +17,11 @@ import {
     IgxInputGroupModule,
     IgxAvatarModule ,
     IgxDropDownModule ,
-    IgxTooltipModule
+    IgxTooltipModule,
+    IgxDialogModule
  } from 'igniteui-angular';
 import { AuthGuard } from '../guard/auth.guard';
+import { ProfileComponent } from './profile/profile.component';
 const appRoutes: Routes = [
     { 
         path: '', 
@@ -28,7 +30,8 @@ const appRoutes: Routes = [
         children:
         [
             {path: '', redirectTo: 'newsfeed', pathMatch: 'full'},
-            {path: 'newsfeed', component: MainComponent}
+            {path: 'newsfeed', component: MainComponent},
+            {path: 'profile/:id', component: ProfileComponent}
         ]
     }
 
@@ -37,7 +40,8 @@ const appRoutes: Routes = [
 @NgModule({
     declarations: [
         ViewComponent,
-        MainComponent
+        MainComponent,
+        ProfileComponent
     ],
     imports: [
         CommonModule,
@@ -47,6 +51,7 @@ const appRoutes: Routes = [
         IgxTabsModule ,
         IgxIconModule,
         IgxToggleModule,
+        IgxDialogModule,
         IgxDropDownModule ,
         IgxRippleModule,
         IgxNavbarModule,
